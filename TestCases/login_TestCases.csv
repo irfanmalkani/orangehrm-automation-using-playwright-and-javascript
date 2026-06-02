@@ -1,0 +1,21 @@
+Test Case ID,Module,Subtask,Feature,Test Type,Description,Pre-condition,Test Steps,Expected Result,Priority,Status
+TC_LOGIN_01,Authentication,Login,Successful Login,Positive,Verify successful login with valid credentials,User is on login page,"1. Enter valid username: Admin
+2. Enter valid password: admin123
+3. Click Login button",User is logged in successfully and redirected to Dashboard page,High,PASSED
+TC_LOGIN_02,Authentication,Login,Invalid Credentials,Negative,Verify login fails with invalid credentials,User is on login page,"1. Enter invalid username
+2. Enter invalid password
+3. Click Login button",Error alert displays 'Invalid credentials' and user remains on login page,High,PASSED
+TC_LOGIN_03,Authentication,Login,Wrong Password validation,Negative,Verify error message for valid username and wrong password,User is on login page,"1. Enter username: Admin
+2. Enter wrong password
+3. Click Login button",Error alert displays 'Invalid credentials',High,PASSED
+TC_LOGIN_04,Authentication,Login,UI Verification,Positive,Verify password field masks input characters,User is on login page,1. Check input tag type attribute of password field,Attribute type equals 'password' representing hidden chars,Low,PASSED
+TC_LOGIN_05,Authentication,Login,UI Verification,Positive,Verify all login page UI elements are visible,User is on login page,"1. Verify logo image
+2. Verify Login header title
+3. Verify form input fields and button
+4. Verify forgot password link
+5. Verify copyright text",All specified login page elements are visible and properly rendered,Low,PASSED
+TC_LOGIN_06,Authentication,Login,UI Verification,Positive,Verify credential hint box displays default login info,User is on login page,1. Inspect the credential hint card above login form,Hint box displays 'Username : Admin' and 'Password : admin123',Low,PASSED
+TC_LOGIN_07,Authentication,Login,Page Title,Positive,Verify login page title contains OrangeHRM,User is on login page,1. Read browser page title,Page title contains 'OrangeHRM',Low,PASSED
+TC_LOGIN_08,Authentication,Login,URL Verification,Positive,Verify login page URL contains auth/login,User is on login page,1. Check current page URL,URL contains '/auth/login',Low,PASSED
+TC_LOGIN_09,Authentication,Login,Placeholder Text,Positive,Verify input placeholders display correct text,User is on login page,"1. Read placeholder attribute of Username input
+2. Read placeholder attribute of Password input",Username placeholder is 'Username' and Password placeholder is 'Password',Low,PASSED

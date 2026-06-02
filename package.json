@@ -1,0 +1,27 @@
+{
+  "name": "orangehrm-automation",
+  "version": "1.0.0",
+  "description": "OrangeHRM Automation using Playwright and JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "posttest": "node utils/zipReports.js",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "codegen": "playwright codegen",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "automation",
+    "orangehrm",
+    "javascript"
+  ],
+  "author": "Irfan Malkani",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "exceljs": "^4.4.0"
+  }
+}

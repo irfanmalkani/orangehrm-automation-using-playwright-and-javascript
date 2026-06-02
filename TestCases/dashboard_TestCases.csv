@@ -1,0 +1,15 @@
+Test Case ID,Module,Subtask,Feature,Test Type,Description,Pre-condition,Test Steps,Expected Result,Priority,Status
+TC_DASH_01,Dashboard,Dashboard Loading,Page Verification,Positive,Verify dashboard page loads after successful login,User is logged in,"1. Complete login flow
+2. Wait for page load",URL contains '/dashboard' and header displays 'Dashboard' text,High,PASSED
+TC_DASH_02,Dashboard,Dashboard Widgets,Widgets Visibility,Positive,Verify dashboard widgets are visible,User is logged in,1. Count visible widgets on the dashboard,Dashboard contains multiple active widgets,Medium,PASSED
+TC_DASH_03,Dashboard,Dashboard Widgets,Time at Work widget,Positive,Verify Time at Work widget is displayed,User is logged in,1. Locate Time at Work widget on dashboard,Time at Work widget is visible on screen,Medium,PASSED
+TC_DASH_04,Dashboard,Dashboard Widgets,My Actions widget,Positive,Verify My Actions widget is displayed,User is logged in,1. Locate My Actions widget on dashboard,My Actions widget is visible on screen,Medium,PASSED
+TC_DASH_05,Dashboard,Dashboard Widgets,Quick Launch widget,Positive,Verify Quick Launch widget is displayed,User is logged in,1. Locate Quick Launch widget on dashboard,Quick Launch widget is visible on screen,Medium,PASSED
+TC_DASH_06,Dashboard,Sidebar Navigation,Sidebar modules,Positive,Verify sidebar contains all main navigation items,User is logged in,"1. Verify visibility of modules: Admin, PIM, Leave, Time, Recruitment, My Info, Performance, Dashboard, Directory, Maintenance, Claim, Buzz",All 12 module sidebar links are visible on screen,High,PASSED
+TC_DASH_07,Dashboard,User Dropdown,Logged-in User Display,Positive,Verify logged-in user name is displayed in header,User is logged in,1. Inspect the top-right header section,Logged-in user name is visible in top right dropdown area,Low,PASSED
+TC_DASH_08,Dashboard,User Dropdown,Dropdown Menu options,Positive,Verify dropdown menu contains all user options,User is logged in,1. Click user profile dropdown,"Menu displays About, Support, Change Password, and Logout links",Medium,PASSED
+TC_DASH_09,Dashboard,Sidebar Navigation,Sidebar Collapse,Positive,Verify sidebar collapse and expand functionality,User is logged in,"1. Click sidebar toggle to collapse
+2. Click sidebar toggle to expand",Sidebar collapses and expands correctly,Medium,PASSED
+TC_DASH_10,Dashboard,Dashboard Widgets,Employees on Leave widget,Positive,Verify Employees on Leave Today widget is displayed,User is logged in,1. Locate Employees on Leave Today widget on dashboard,Employees on Leave Today widget is visible on screen,Medium,PASSED
+TC_DASH_11,Dashboard,Sidebar Navigation,Sidebar Search,Positive,Verify sidebar search filters navigation items,User is logged in,"1. Type ""Admin"" in sidebar search box",Only Admin-related items are visible in sidebar,Medium,PASSED
+TC_DASH_12,Dashboard,Dashboard Loading,URL Verification,Positive,Verify dashboard URL contains correct path,User is logged in,1. Check current page URL after login,URL contains '/dashboard/index',Low,PASSED

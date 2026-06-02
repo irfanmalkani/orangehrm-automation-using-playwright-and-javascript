@@ -1,0 +1,5 @@
+Test Case ID,Module,Subtask,Feature,Test Type,Description,Pre-condition,Test Steps,Expected Result,Priority,Status
+TC_LOGOUT_01,Authentication,Logout,Logout Operation,Positive,Verify logout functionality redirects to login page,User is logged in,"1. Click user profile dropdown
+2. Click Logout link",User is logged out and redirected to login page,High,PASSED
+TC_LOGOUT_02,Authentication,Logout,Session Security,Security,Verify dashboard cannot be accessed directly after logout,User is logged out,1. Navigate directly to dashboard URL /web/index.php/dashboard/index,User is redirected to login page and cannot view dashboard without auth,High,PASSED
+TC_LOGOUT_03,Authentication,Logout,Session Security,Security,Verify browser back button does not access dashboard after logout,User is logged out,1. Press browser back button after logout,User remains on login page and dashboard is not accessible,Medium,PASSED

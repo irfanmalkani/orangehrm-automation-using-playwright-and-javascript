@@ -1,0 +1,16 @@
+Test Case ID,Module,Subtask,Feature,Test Type,Description,Pre-condition,Test Steps,Expected Result,Priority,Status
+TC_PIM_01,PIM,Add Employee,Employee Creation,Positive,Verify adding a new employee,User is logged in PIM module,"1. Click Add Employee button
+2. Enter FirstName, LastName, ID
+3. Click Save button",Employee is successfully saved and shows up in search results,High,PASSED
+TC_PIM_02,PIM,Search Employee,Search Operation,Positive,Verify searching employee details by ID,User is logged in PIM module,"1. Enter Employee ID in search field
+2. Click Search button",Employee record matching ID is displayed in results table,High,PASSED
+TC_PIM_03,PIM,Update Employee,Edit Operation,Positive,Verify updating employee nickname,User is logged in PIM module,"1. Click Edit for employee
+2. Set Nickname
+3. Click Save button",Updated nickname is saved and persists on profile reload,Medium,PASSED
+TC_PIM_04,PIM,Delete Employee,Delete Operation,Positive,Verify deleting an employee record,User is logged in PIM module,"1. Locate employee in table
+2. Click Delete icon
+3. Confirm deletion in popup",Employee is removed from table and search returns no results,High,PASSED
+TC_PIM_05,PIM,Search Employee,No Results Handling,Negative,Verify search with non-existent employee ID returns no records,User is logged in PIM module,"1. Enter non-existent Employee ID
+2. Click Search button",Table displays 0 rows and no matching records found,Medium,PASSED
+TC_PIM_06,PIM,Employee List,Tab Loading,Positive,Verify PIM Employee List tab loads correctly,User is logged in PIM module,"1. Click Employee List tab
+2. Verify search form elements","Search form with Employee ID input, Search and Reset buttons is visible",Low,PASSED

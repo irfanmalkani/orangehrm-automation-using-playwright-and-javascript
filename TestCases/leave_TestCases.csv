@@ -1,0 +1,8 @@
+Test Case ID,Module,Subtask,Feature,Test Type,Description,Pre-condition,Test Steps,Expected Result,Priority,Status
+TC_LEAVE_01,Leave,Apply Leave,Apply Operation,Positive,Verify applying for a leave request,User is logged in Leave module,"1. Click Apply link
+2. Select Leave Type
+3. Enter Start Date and End Date
+4. Add comments and click Apply",Leave request is successfully submitted,High,PASSED
+TC_LEAVE_02,Leave,Leave Status,Status Verification,Positive,Verify status of applied leave,User is logged in Leave module,"1. Navigate to My Leave list
+2. Check status of latest request",Latest leave displays correct status (e.g. 'Pending Approval'),High,PASSED
+TC_LEAVE_03,Leave,Leave Details,Details Verification,Positive,Verify details of applied leave,User is logged in Leave module,1. Check details of latest leave item in My Leave list,"Leave type, dates, and comment details are displayed correctly",Medium,PASSED

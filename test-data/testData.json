@@ -1,0 +1,35 @@
+{
+  "loginCredentials": {
+    "valid": {
+      "username": "Admin",
+      "password": "admin123"
+    },
+    "invalid": {
+      "username": "InvalidUser",
+      "password": "WrongPassword123"
+    }
+  },
+  "employeeDetails": {
+    "firstName": "Alex",
+    "lastName": "Hunter",
+    "employeeId": "98754",
+    "nickname": "HunterX"
+  },
+  "userDetails": {
+    "role": "Admin",
+    "employeeName": "Alex Hunter",
+    "username": "alex.hunter.admin",
+    "password": "Password123!"
+  },
+  "leaveDetails": {
+    "startDate": "2026-06-15",
+    "endDate": "2026-06-18",
+    "comments": "Vacation and personal time off request."
+  },
+  "candidateDetails": {
+    "firstName": "Sophia",
+    "lastName": "Miller",
+    "email": "sophia.miller@example.com",
+    "contactNumber": "1234567890"
+  }
+}

@@ -1,0 +1,115 @@
+Test Case ID,Module,Subtask,Feature,Test Type,Description,Pre-condition,Test Steps,Expected Result,Priority,Status
+TC_LOGIN_01,Authentication,Login,Successful Login,Positive,Verify successful login with valid credentials,User is on login page,"1. Enter valid username: Admin
+2. Enter valid password: admin123
+3. Click Login button",User is logged in successfully and redirected to Dashboard page,High,PASSED
+TC_LOGIN_02,Authentication,Login,Invalid Credentials,Negative,Verify login fails with invalid credentials,User is on login page,"1. Enter invalid username
+2. Enter invalid password
+3. Click Login button",Error alert displays 'Invalid credentials' and user remains on login page,High,PASSED
+TC_LOGIN_03,Authentication,Login,Wrong Password validation,Negative,Verify error message for valid username and wrong password,User is on login page,"1. Enter username: Admin
+2. Enter wrong password
+3. Click Login button",Error alert displays 'Invalid credentials',High,PASSED
+TC_LOGIN_04,Authentication,Login,UI Verification,Positive,Verify password field masks input characters,User is on login page,1. Check input tag type attribute of password field,Attribute type equals 'password' representing hidden chars,Low,PASSED
+TC_LOGIN_05,Authentication,Login,UI Verification,Positive,Verify all login page UI elements are visible,User is on login page,"1. Verify logo image
+2. Verify Login header title
+3. Verify form input fields and button
+4. Verify forgot password link
+5. Verify copyright text",All specified login page elements are visible and properly rendered,Low,PASSED
+TC_LOGIN_06,Authentication,Login,UI Verification,Positive,Verify credential hint box displays default login info,User is on login page,1. Inspect the credential hint card above login form,Hint box displays 'Username : Admin' and 'Password : admin123',Low,PASSED
+TC_LOGIN_07,Authentication,Login,Page Title,Positive,Verify login page title contains OrangeHRM,User is on login page,1. Read browser page title,Page title contains 'OrangeHRM',Low,PASSED
+TC_LOGIN_08,Authentication,Login,URL Verification,Positive,Verify login page URL contains auth/login,User is on login page,1. Check current page URL,URL contains '/auth/login',Low,PASSED
+TC_LOGIN_09,Authentication,Login,Placeholder Text,Positive,Verify input placeholders display correct text,User is on login page,"1. Read placeholder attribute of Username input
+2. Read placeholder attribute of Password input",Username placeholder is 'Username' and Password placeholder is 'Password',Low,PASSED
+TC_LOGOUT_01,Authentication,Logout,Logout Operation,Positive,Verify logout functionality redirects to login page,User is logged in,"1. Click user profile dropdown
+2. Click Logout link",User is logged out and redirected to login page,High,PASSED
+TC_LOGOUT_02,Authentication,Logout,Session Security,Security,Verify dashboard cannot be accessed directly after logout,User is logged out,1. Navigate directly to dashboard URL /web/index.php/dashboard/index,User is redirected to login page and cannot view dashboard without auth,High,PASSED
+TC_LOGOUT_03,Authentication,Logout,Session Security,Security,Verify browser back button does not access dashboard after logout,User is logged out,1. Press browser back button after logout,User remains on login page and dashboard is not accessible,Medium,PASSED
+TC_VALID_01,Authentication,Validations,Empty Fields validation,Negative,Verify required field validations when both fields are blank,User is on login page,"1. Leave Username blank
+2. Leave Password blank
+3. Click Login button",'Required' validation text is displayed under both inputs,Medium,PASSED
+TC_VALID_02,Authentication,Validations,Empty Username validation,Negative,Verify username required validation when only password is entered,User is on login page,"1. Leave Username blank
+2. Enter valid password
+3. Click Login button",'Required' validation text is displayed under Username input only,Medium,PASSED
+TC_VALID_03,Authentication,Validations,Empty Password validation,Negative,Verify password required validation when only username is entered,User is on login page,"1. Enter valid username
+2. Leave Password blank
+3. Click Login button",'Required' validation text is displayed under Password input only,Medium,PASSED
+TC_VALID_04,Authentication,Validations,Special Characters,Security,Verify login fails with special characters in credentials,User is on login page,"1. Enter script tags as username
+2. Enter special characters as password
+3. Click Login button",Error alert displays 'Invalid credentials' and no XSS occurs,High,PASSED
+TC_FORGOT_01,Authentication,Forgot Password,Forgot Password Link,Positive,Verify navigation to Forgot Password page,User is on login page,1. Click 'Forgot your password?' link,User is navigated to Reset Password page showing username field and reset buttons,Medium,PASSED
+TC_FORGOT_02,Authentication,Forgot Password,Cancel Operation,Positive,Verify cancellation of password reset request,User is on Forgot Password page,1. Click Cancel button,User is redirected back to Login page with Login button visible,Medium,PASSED
+TC_FORGOT_03,Authentication,Forgot Password,Password Reset Submission,Positive,Verify successful submission of password reset request,User is on Forgot Password page,"1. Enter username: Admin
+2. Click Reset Password button",Success title displays 'Reset Password link sent successfully',High,PASSED
+TC_FORGOT_04,Authentication,Forgot Password,Page Heading,Positive,Verify forgot password page heading text,User is on Forgot Password page,"1. Navigate to forgot password page
+2. Check heading text",Heading displays 'Reset Password',Low,PASSED
+TC_DASH_01,Dashboard,Dashboard Loading,Page Verification,Positive,Verify dashboard page loads after successful login,User is logged in,"1. Complete login flow
+2. Wait for page load",URL contains '/dashboard' and header displays 'Dashboard' text,High,PASSED
+TC_DASH_02,Dashboard,Dashboard Widgets,Widgets Visibility,Positive,Verify dashboard widgets are visible,User is logged in,1. Count visible widgets on the dashboard,Dashboard contains multiple active widgets,Medium,PASSED
+TC_DASH_03,Dashboard,Dashboard Widgets,Time at Work widget,Positive,Verify Time at Work widget is displayed,User is logged in,1. Locate Time at Work widget on dashboard,Time at Work widget is visible on screen,Medium,PASSED
+TC_DASH_04,Dashboard,Dashboard Widgets,My Actions widget,Positive,Verify My Actions widget is displayed,User is logged in,1. Locate My Actions widget on dashboard,My Actions widget is visible on screen,Medium,PASSED
+TC_DASH_05,Dashboard,Dashboard Widgets,Quick Launch widget,Positive,Verify Quick Launch widget is displayed,User is logged in,1. Locate Quick Launch widget on dashboard,Quick Launch widget is visible on screen,Medium,PASSED
+TC_DASH_06,Dashboard,Sidebar Navigation,Sidebar modules,Positive,Verify sidebar contains all main navigation items,User is logged in,"1. Verify visibility of modules: Admin, PIM, Leave, Time, Recruitment, My Info, Performance, Dashboard, Directory, Maintenance, Claim, Buzz",All 12 module sidebar links are visible on screen,High,PASSED
+TC_DASH_07,Dashboard,User Dropdown,Logged-in User Display,Positive,Verify logged-in user name is displayed in header,User is logged in,1. Inspect the top-right header section,Logged-in user name is visible in top right dropdown area,Low,PASSED
+TC_DASH_08,Dashboard,User Dropdown,Dropdown Menu options,Positive,Verify dropdown menu contains all user options,User is logged in,1. Click user profile dropdown,"Menu displays About, Support, Change Password, and Logout links",Medium,PASSED
+TC_DASH_09,Dashboard,Sidebar Navigation,Sidebar Collapse,Positive,Verify sidebar collapse and expand functionality,User is logged in,"1. Click sidebar toggle to collapse
+2. Click sidebar toggle to expand",Sidebar collapses and expands correctly,Medium,PASSED
+TC_DASH_10,Dashboard,Dashboard Widgets,Employees on Leave widget,Positive,Verify Employees on Leave Today widget is displayed,User is logged in,1. Locate Employees on Leave Today widget on dashboard,Employees on Leave Today widget is visible on screen,Medium,PASSED
+TC_DASH_11,Dashboard,Sidebar Navigation,Sidebar Search,Positive,Verify sidebar search filters navigation items,User is logged in,"1. Type ""Admin"" in sidebar search box",Only Admin-related items are visible in sidebar,Medium,PASSED
+TC_DASH_12,Dashboard,Dashboard Loading,URL Verification,Positive,Verify dashboard URL contains correct path,User is logged in,1. Check current page URL after login,URL contains '/dashboard/index',Low,PASSED
+TC_PIM_01,PIM,Add Employee,Employee Creation,Positive,Verify adding a new employee,User is logged in PIM module,"1. Click Add Employee button
+2. Enter FirstName, LastName, ID
+3. Click Save button",Employee is successfully saved and shows up in search results,High,PASSED
+TC_PIM_02,PIM,Search Employee,Search Operation,Positive,Verify searching employee details by ID,User is logged in PIM module,"1. Enter Employee ID in search field
+2. Click Search button",Employee record matching ID is displayed in results table,High,PASSED
+TC_PIM_03,PIM,Update Employee,Edit Operation,Positive,Verify updating employee nickname,User is logged in PIM module,"1. Click Edit for employee
+2. Set Nickname
+3. Click Save button",Updated nickname is saved and persists on profile reload,Medium,PASSED
+TC_PIM_04,PIM,Delete Employee,Delete Operation,Positive,Verify deleting an employee record,User is logged in PIM module,"1. Locate employee in table
+2. Click Delete icon
+3. Confirm deletion in popup",Employee is removed from table and search returns no results,High,PASSED
+TC_PIM_05,PIM,Search Employee,No Results Handling,Negative,Verify search with non-existent employee ID returns no records,User is logged in PIM module,"1. Enter non-existent Employee ID
+2. Click Search button",Table displays 0 rows and no matching records found,Medium,PASSED
+TC_PIM_06,PIM,Employee List,Tab Loading,Positive,Verify PIM Employee List tab loads correctly,User is logged in PIM module,"1. Click Employee List tab
+2. Verify search form elements","Search form with Employee ID input, Search and Reset buttons is visible",Low,PASSED
+TC_ADMIN_01,Admin,Add User,User Creation,Positive,Verify adding new admin system user,User is logged in Admin module,"1. Click Add button
+2. Select User Role
+3. Enter existing employee name
+4. Enter unique username, password
+5. Click Save button",System user is created and visible in search list,High,PASSED
+TC_ADMIN_02,Admin,Search User,Search Operation,Positive,Verify searching system user by username,User is logged in Admin module,"1. Enter username
+2. Click Search button",User record matching username is displayed in results,High,PASSED
+TC_ADMIN_03,Admin,Update User,Edit Operation,Positive,Verify updating system user role,User is logged in Admin module,"1. Search user
+2. Click Edit
+3. Change role
+4. Click Save",Updated role is successfully saved and persists,Medium,PASSED
+TC_ADMIN_04,Admin,Search User,Role Verification,Positive,Verify user role displays correctly in search results,User is logged in Admin module,"1. Search user by username
+2. Check role column in results",Role column displays the correct updated role,Medium,PASSED
+TC_ADMIN_05,Admin,Admin Page,UI Verification,Positive,Verify Admin page has Add button visible,User is logged in Admin module,"1. Navigate to Admin module
+2. Check Add button visibility",Add button is visible on Admin page,Low,PASSED
+TC_ADMIN_06,Admin,Delete User,Delete Operation,Positive,Verify deleting system user,User is logged in Admin module,"1. Search user
+2. Click Delete button
+3. Confirm deletion",User is removed from database and search returns no results,High,PASSED
+TC_LEAVE_01,Leave,Apply Leave,Apply Operation,Positive,Verify applying for a leave request,User is logged in Leave module,"1. Click Apply link
+2. Select Leave Type
+3. Enter Start Date and End Date
+4. Add comments and click Apply",Leave request is successfully submitted,High,PASSED
+TC_LEAVE_02,Leave,Leave Status,Status Verification,Positive,Verify status of applied leave,User is logged in Leave module,"1. Navigate to My Leave list
+2. Check status of latest request",Latest leave displays correct status (e.g. 'Pending Approval'),High,PASSED
+TC_LEAVE_03,Leave,Leave Details,Details Verification,Positive,Verify details of applied leave,User is logged in Leave module,1. Check details of latest leave item in My Leave list,"Leave type, dates, and comment details are displayed correctly",Medium,PASSED
+TC_REC_01,Recruitment,Add Candidate,Candidate Creation,Positive,Verify adding candidate details,User is logged in Recruitment module,"1. Click Add Candidate button
+2. Enter FirstName, LastName, Email, Contact
+3. Click Save button",Candidate is successfully added and profile page loads,High,PASSED
+TC_REC_02,Recruitment,Search Candidate,Search Operation,Positive,Verify searching candidate records,User is logged in Recruitment module,"1. Search candidate by name
+2. Verify results table",Candidate record is displayed in search results,High,PASSED
+TC_REC_03,Recruitment,Recruitment Page,UI Verification,Positive,Verify Recruitment page has Add button visible,User is logged in Recruitment module,"1. Navigate to Recruitment module
+2. Check Add button visibility",Add button is visible on Recruitment page,Low,PASSED
+TC_REC_04,Recruitment,Candidates Tab,Tab Functionality,Positive,Verify Candidates tab is functional,User is logged in Recruitment module,"1. Click Candidates tab
+2. Verify search form elements",Search button is visible and Candidates tab loads correctly,Low,PASSED
+TC_MYINFO_01,My Info,Update Personal Info,Personal Details,Positive,Verify updating personal details,User is logged in My Info module,"1. Enter Nickname
+2. Click Save button",Personal details are successfully saved and updated,Medium,PASSED
+TC_MYINFO_02,My Info,Upload Image,Profile Picture,Positive,Verify uploading profile image,User is logged in My Info module,"1. Click profile picture wrapper
+2. Choose file path
+3. Click Save",Profile image is successfully uploaded and preview container is visible,Medium,PASSED
+TC_MYINFO_03,My Info,Personal Info,Pre-populated Fields,Positive,Verify first name field is pre-populated,User is logged in My Info module,"1. Navigate to My Info page
+2. Check first name input value",First name field contains a non-empty value,Low,PASSED
+TC_MYINFO_04,My Info,Personal Info,Page Heading,Positive,Verify My Info page heading displays Personal Details,User is logged in My Info module,"1. Navigate to My Info page
+2. Check main heading text",Heading displays 'Personal Details',Low,PASSED

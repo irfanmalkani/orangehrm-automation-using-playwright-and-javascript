@@ -1,0 +1,10 @@
+Test Case ID,Module,Subtask,Feature,Test Type,Description,Pre-condition,Test Steps,Expected Result,Priority,Status
+TC_REC_01,Recruitment,Add Candidate,Candidate Creation,Positive,Verify adding candidate details,User is logged in Recruitment module,"1. Click Add Candidate button
+2. Enter FirstName, LastName, Email, Contact
+3. Click Save button",Candidate is successfully added and profile page loads,High,PASSED
+TC_REC_02,Recruitment,Search Candidate,Search Operation,Positive,Verify searching candidate records,User is logged in Recruitment module,"1. Search candidate by name
+2. Verify results table",Candidate record is displayed in search results,High,PASSED
+TC_REC_03,Recruitment,Recruitment Page,UI Verification,Positive,Verify Recruitment page has Add button visible,User is logged in Recruitment module,"1. Navigate to Recruitment module
+2. Check Add button visibility",Add button is visible on Recruitment page,Low,PASSED
+TC_REC_04,Recruitment,Candidates Tab,Tab Functionality,Positive,Verify Candidates tab is functional,User is logged in Recruitment module,"1. Click Candidates tab
+2. Verify search form elements",Search button is visible and Candidates tab loads correctly,Low,PASSED

@@ -1,0 +1,19 @@
+Test Case ID,Module,Subtask,Feature,Test Type,Description,Pre-condition,Test Steps,Expected Result,Priority,Status
+TC_ADMIN_01,Admin,Add User,User Creation,Positive,Verify adding new admin system user,User is logged in Admin module,"1. Click Add button
+2. Select User Role
+3. Enter existing employee name
+4. Enter unique username, password
+5. Click Save button",System user is created and visible in search list,High,PASSED
+TC_ADMIN_02,Admin,Search User,Search Operation,Positive,Verify searching system user by username,User is logged in Admin module,"1. Enter username
+2. Click Search button",User record matching username is displayed in results,High,PASSED
+TC_ADMIN_03,Admin,Update User,Edit Operation,Positive,Verify updating system user role,User is logged in Admin module,"1. Search user
+2. Click Edit
+3. Change role
+4. Click Save",Updated role is successfully saved and persists,Medium,PASSED
+TC_ADMIN_04,Admin,Search User,Role Verification,Positive,Verify user role displays correctly in search results,User is logged in Admin module,"1. Search user by username
+2. Check role column in results",Role column displays the correct updated role,Medium,PASSED
+TC_ADMIN_05,Admin,Admin Page,UI Verification,Positive,Verify Admin page has Add button visible,User is logged in Admin module,"1. Navigate to Admin module
+2. Check Add button visibility",Add button is visible on Admin page,Low,PASSED
+TC_ADMIN_06,Admin,Delete User,Delete Operation,Positive,Verify deleting system user,User is logged in Admin module,"1. Search user
+2. Click Delete button
+3. Confirm deletion",User is removed from database and search returns no results,High,PASSED

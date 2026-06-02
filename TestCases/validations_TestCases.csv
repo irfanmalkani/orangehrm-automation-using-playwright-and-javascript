@@ -1,0 +1,13 @@
+Test Case ID,Module,Subtask,Feature,Test Type,Description,Pre-condition,Test Steps,Expected Result,Priority,Status
+TC_VALID_01,Authentication,Validations,Empty Fields validation,Negative,Verify required field validations when both fields are blank,User is on login page,"1. Leave Username blank
+2. Leave Password blank
+3. Click Login button",'Required' validation text is displayed under both inputs,Medium,PASSED
+TC_VALID_02,Authentication,Validations,Empty Username validation,Negative,Verify username required validation when only password is entered,User is on login page,"1. Leave Username blank
+2. Enter valid password
+3. Click Login button",'Required' validation text is displayed under Username input only,Medium,PASSED
+TC_VALID_03,Authentication,Validations,Empty Password validation,Negative,Verify password required validation when only username is entered,User is on login page,"1. Enter valid username
+2. Leave Password blank
+3. Click Login button",'Required' validation text is displayed under Password input only,Medium,PASSED
+TC_VALID_04,Authentication,Validations,Special Characters,Security,Verify login fails with special characters in credentials,User is on login page,"1. Enter script tags as username
+2. Enter special characters as password
+3. Click Login button",Error alert displays 'Invalid credentials' and no XSS occurs,High,PASSED

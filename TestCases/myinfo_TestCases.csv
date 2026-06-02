@@ -1,0 +1,10 @@
+Test Case ID,Module,Subtask,Feature,Test Type,Description,Pre-condition,Test Steps,Expected Result,Priority,Status
+TC_MYINFO_01,My Info,Update Personal Info,Personal Details,Positive,Verify updating personal details,User is logged in My Info module,"1. Enter Nickname
+2. Click Save button",Personal details are successfully saved and updated,Medium,PASSED
+TC_MYINFO_02,My Info,Upload Image,Profile Picture,Positive,Verify uploading profile image,User is logged in My Info module,"1. Click profile picture wrapper
+2. Choose file path
+3. Click Save",Profile image is successfully uploaded and preview container is visible,Medium,PASSED
+TC_MYINFO_03,My Info,Personal Info,Pre-populated Fields,Positive,Verify first name field is pre-populated,User is logged in My Info module,"1. Navigate to My Info page
+2. Check first name input value",First name field contains a non-empty value,Low,PASSED
+TC_MYINFO_04,My Info,Personal Info,Page Heading,Positive,Verify My Info page heading displays Personal Details,User is logged in My Info module,"1. Navigate to My Info page
+2. Check main heading text",Heading displays 'Personal Details',Low,PASSED
